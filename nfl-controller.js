@@ -26,7 +26,7 @@ function PlayersController() {
     }
 
     getTeam = function () {
-        var team = getMyTeam()
+        var team = playersService.getMyTeam()
 
         var template = ''
 
@@ -52,26 +52,27 @@ function PlayersController() {
 
     this.searchName = function (event) {
         var nameThing = {
-            name: event.target.name.value,
+            name: event.target.name.value
         }
         playersService.searchName(nameThing, draw)
     }
 
     this.searchTeam = function (event) {
         var teamThing = {
-            team: event.target.team.value,
+            team: event.target.team.value
         }
         playersService.searchTeam(teamThing, draw)
     }
 
     this.searchPosition = function (event) {
         var positionThing = {
-            position: event.target.position.value,
+            position: event.target.position.value
         }
         playersService.searchPosition(positionThing, draw)
     }
 
     this.teamAdd = function (id) {
+        $("div").remove("." + id)
         playersService.teamAdd(id)
         getTeam()
 
