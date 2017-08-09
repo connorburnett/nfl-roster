@@ -1,0 +1,56 @@
+h1.head1 {
+    margin-top: 25px;
+    text-align: center;
+    font-family: "Georgia", serif;
+}
+
+h1.head2 {
+    margin-top: 25px;
+    text-align: center;
+    font-family: "Georgia", serif;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: "Georgia", serif;
+}
+
+div.image {
+    content: url("http://i.imgur.com/pW0LnAc.jpg");
+    width: 20%;
+    margin: auto;
+}
+
+#panel {
+    margin-top: 20px;
+}
+
+#nfllogo {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+img {
+    border: 2px solid silver;
+    display: block;
+    margin: 0 auto;
+    -moz-border-radius: 100px;
+	-webkit-border-radius: 100px;
+	border-radius: 100px;
+}
+
+.col-xs-3 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.col-xs-4 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.col-xs-5 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}

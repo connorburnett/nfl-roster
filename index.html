@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>NFL Roster</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="col-xs-4">
+            <div>
+                <h1 class="head1">P L A Y E R</h1>
+            </div>
+        </div>
+        <div class="col-xs-4" id="nfllogo">
+            <div class="image"></div>
+        </div>
+        <div class="col-xs-4">
+            <div>
+                <h1 class="head2">S E A R C H E R</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="container-fluid">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+
+                    <div class="row">
+                        <form onsubmit="app.controllers.controller.searchName(event)">
+                            <div class="col-xs-5">
+                                <input type="text" class="form-control" id="newPlayer" placeholder="Name Search">
+                            </div>
+                            <div class="col-xs-3">
+                                <button id="searchNameBtn" type="submit" class="btn btn-default pull-left">Search By Name</button>
+                            </div>
+                        </form>
+                        <div class="col-xs-4">
+
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <form onsubmit="app.controllers.controller.searchTeam(event)">
+                            <div class="col-xs-5">
+                                <input type="text" class="form-control" id="newPlayer" placeholder="Team Search">
+                            </div>
+                            <div class="col-xs-3">
+                                <button id="searchTeamBtn" type="submit" class="btn btn-default pull-left">Search By Team</button>
+                            </div>
+                        </form>
+                        <div class="col-xs-4">
+
+                        </div>
+                    </div>
+
+                    <div class="row">
+
+                        <form onsubmit="app.controllers.controller.searchPosition(event)">
+                            <div class="col-xs-5">
+                                <input type="text" class="form-control" id="newPlayer" placeholder="Position Search">
+                            </div>
+                            <div class="col-xs-3">
+                                <button id="searchPositionBtn" type="submit" class="btn btn-default pull-left">Search By Position</button>
+                            </div>
+                        </form>
+                        <div class="col-xs-4">
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="panel-body">
+                <table id="playerList" class="table table-striped">
+                    <div class="row">
+                        <div id="players">
+
+                        </div>
+                    </div>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <h2>T E A M</h2>
+    </div>
+    <div class="container">
+        <div class="container-fluid">
+            <div class="panel panel-default">
+
+                <div class="panel-body">
+                    <table id="teamList" class="table table-striped">
+                        <div class="row">
+                            <div id="playersOnTeam">
+
+                            </div>
+                        </div>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+    <script src="nfl-service.js"></script>
+    <script src="nfl-controller.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
